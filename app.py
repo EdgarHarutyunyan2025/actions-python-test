@@ -3,32 +3,32 @@
 сложение, вычитание, умножение и деление.
 """
 
-def add(x, y):
+def add(first_number, second_number):
     """
     Функция для сложения двух чисел.
     """
-    return x + y
+    return first_number + second_number
 
-def subtract(x, y):
+def subtract(first_number, second_number):
     """
     Функция для вычитания двух чисел.
     """
-    return x - y
+    return first_number - second_number
 
-def multiply(x, y):
+def multiply(first_number, second_number):
     """
     Функция для умножения двух чисел.
     """
-    return x * y
+    return first_number * second_number
 
-def divide(x, y):
+def divide(first_number, second_number):
     """
     Функция для деления двух чисел.
     Возвращает результат деления или сообщение об ошибке, если деление на ноль.
     """
-    if y == 0:
+    if second_number == 0:
         return "Деление на ноль невозможно"
-    return x / y
+    return first_number / second_number
 
 # Заданные значения (имена переменных должны быть в верхнем регистре)
 NUM1 = 10
@@ -39,4 +39,3 @@ print(f"{NUM1} + {NUM2} = {add(NUM1, NUM2)}")
 print(f"{NUM1} - {NUM2} = {subtract(NUM1, NUM2)}")
 print(f"{NUM1} * {NUM2} = {multiply(NUM1, NUM2)}")
 print(f"{NUM1} / {NUM2} = {divide(NUM1, NUM2)}")
-

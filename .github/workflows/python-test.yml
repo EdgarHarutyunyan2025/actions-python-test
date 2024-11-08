@@ -26,6 +26,9 @@ jobs:
       - name: pwd
         run: pwd
 
+      - name: cat files
+        run: cat app.py
+
       - name: install pylint
         run: sudo apt install pylint
 
