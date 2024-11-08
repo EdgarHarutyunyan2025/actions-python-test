@@ -9,6 +9,11 @@ jobs:
   my_testing:
     runs-on: ubuntu-latest
     steps:
+      - name: python version
+        run: |
+          python3 --version
+          node -v
+
       - name: Checkout code
         uses: actions/checkout@v4
 
