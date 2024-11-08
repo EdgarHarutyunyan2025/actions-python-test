@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  my_testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: List installed files (optional debug step)
+        run: ls -la
+
+      - name: run script
+        run: python3 app.py
+          
+      - name: pwd
+        run: pwd
