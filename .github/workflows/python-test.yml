@@ -14,8 +14,12 @@ jobs:
           python3 --version
           node -v
 
+      - name: ls
+        run: ls -ls
+
       - name: Checkout code
         uses: actions/checkout@v4
+
 
       - name: List dir 
         run: ls -la
