@@ -27,4 +27,4 @@ jobs:
         run: pwd
 
       - name: pylint 
-        pylint app.py
+        run: pylint app.py
