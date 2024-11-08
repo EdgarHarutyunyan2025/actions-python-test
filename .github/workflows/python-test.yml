@@ -27,7 +27,7 @@ jobs:
         run: pwd
 
       - name: install pylint
-        run: apt install pylint
+        run: sudo apt install pylint
 
       - name: pylint 
         run: pylint app.py
