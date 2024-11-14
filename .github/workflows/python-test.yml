@@ -9,32 +9,5 @@ jobs:
   my_testing:
     runs-on: ubuntu-latest
     steps:
-      - name: python version
-        run: |
-          python3 --version
-          node -v
-
-      - name: ls
-        run: ls -la
-
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-
-      - name: List dir 
-        run: ls -la
-
-      - name: run script
-        run: python3 app.py
-          
-      - name: pwd
-        run: pwd
-
-      - name: cat files
-        run: cat app.py
-
-      - name: install pylint
-        run: sudo apt install pylint
-
-      - name: pylint 
-        run: pylint --exit-0 app.py
+      - name: print context
+        run: exho "${{ github }}"
