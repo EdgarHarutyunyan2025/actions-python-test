@@ -7,7 +7,14 @@ on:
 
 jobs:
   my_testing:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest,windows-latest]
+    runs-on: ${{ master.os }}
     steps:
-      - name: print context
-        run: echo "${{ toJSON(github) }}"
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13' 
+      - run: python app.py
+  
